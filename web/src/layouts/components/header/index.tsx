@@ -1,5 +1,3 @@
-import { ReactComponent as FileIcon } from '@/assets/svg/file-management.svg';
-import { ReactComponent as GraphIcon } from '@/assets/svg/graph.svg';
 import { ReactComponent as KnowledgeBaseIcon } from '@/assets/svg/knowledge-base.svg';
 import { useTranslate } from '@/hooks/common-hooks';
 import { useFetchAppConf } from '@/hooks/logic-hooks';
@@ -28,8 +26,8 @@ const RagHeader = () => {
       { path: '/knowledge', name: t('knowledgeBase'), icon: KnowledgeBaseIcon },
       { path: '/chat', name: t('chat'), icon: MessageOutlined },
       { path: '/search', name: t('search'), icon: SearchOutlined },
-      { path: '/flow', name: t('flow'), icon: GraphIcon },
-      { path: '/file', name: t('fileManager'), icon: FileIcon },
+      // { path: '/flow', name: t('flow'), icon: GraphIcon },
+      // { path: '/file', name: t('fileManager'), icon: FileIcon },
     ],
     [t],
   );
@@ -70,7 +68,7 @@ const RagHeader = () => {
           onClick={handleLogoClick}
           className={styles.logoWrapper}
         >
-          <img src="/logo.svg" alt="" className={styles.appIcon} />
+          <img src="/logo-shangtang.png" alt="" className={styles.appIcon} />
           <span className={styles.appName}>{appConf.appName}</span>
         </Space>
       </a>

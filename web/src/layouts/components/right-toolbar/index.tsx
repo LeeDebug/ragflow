@@ -49,9 +49,11 @@ const RightToolBar = () => {
             <DownOutlined />
           </Space>
         </Dropdown>
-        <Circle>
-          <GithubOutlined onClick={handleGithubCLick} />
-        </Circle>
+        {false && (
+          <Circle>
+            <GithubOutlined onClick={handleGithubCLick} />
+          </Circle>
+        )}
         {/* <Circle>
           <MonIcon />
         </Circle> */}
