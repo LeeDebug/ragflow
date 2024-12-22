@@ -27,7 +27,7 @@ services:
       retries: 120
     networks:
       - ragflow
-    restart: always
+    restart: unless-stopped
 
   mysql:
     # mysql:5.7 linux/arm64 image is unavailable.
@@ -55,7 +55,7 @@ services:
       interval: 10s
       timeout: 10s
       retries: 3
-    restart: always
+    restart: unless-stopped
 
   minio:
     image: quay.io/minio/minio:RELEASE.2023-12-20T01-00-02Z
@@ -72,7 +72,7 @@ services:
       - minio_data:/data
     networks:
       - ragflow
-    restart: always
+    restart: unless-stopped
 
   redis:
     image: redis:7.2.4
@@ -84,7 +84,7 @@ services:
       - redis_data:/data
     networks:
       - ragflow
-    restart: always
+    restart: unless-stopped
 
 
 
